@@ -1,7 +1,7 @@
 module.exports = {
   mode: 'development',
   entry: {
-    component1: './src/clipboard-copy-element/main.ts'
+    clipboardCopyElement: './src/clipboard-copy-element/main.ts'
   },
   output: {
     filename: '[name].js',
