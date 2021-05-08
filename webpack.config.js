@@ -1,6 +1,12 @@
 module.exports = {
   mode: 'development',
-  entry: './src/main.ts',
+  entry: {
+    component1: './src/clipboard-copy-element/main.ts'
+  },
+  output: {
+    filename: '[name].js',
+    path: __dirname + '/dist'
+  },
   module: {
     rules: [
       {
