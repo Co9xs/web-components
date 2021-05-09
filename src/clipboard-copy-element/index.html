@@ -6,5 +6,45 @@
   </head>
   <body>
     <h1>Clipboard Copy Element</h1>
+    <ul>
+      <li>
+        <p>Nodeのコンテンツをコピーする</p>
+        <clipboard-copy for="sentence" class="btn">copy</clipboard-copy>
+        <p id="sentence">コピーされる文</p>
+      </li>
+      <li>
+        <p>forで指定された要素がinputかtextareaだったらそのvalue属性をコピーする</p>
+        <clipboard-copy for="input-value" class="btn">copy</clipboard-copy>
+        <input id="input-value" value="inputの値">
+      </li>
+      <li>
+        <p>forで指定された要素がaタグだったらそのhref属性をコピーする</p>
+        <clipboard-copy for="link" class="btn">copy</clipboard-copy>
+        <a id="link" href="https://example.com">リンク</a>
+      </li>
+      <li>
+        <p>value属性にコピーされる値を指定（例：value="example"）</p>
+        <clipboard-copy for="sentence" class="btn" value="example">copy</clipboard-copy>
+      </li>
+    </ul>
+    <textarea placeholder="ペーストしてみてください"></textarea>
   </body>
+  <style>
+    ul {
+      margin: 0;
+      padding: 16px;
+    }
+    textarea {
+      width: 100%;
+      height: 300px;
+      margin-top: 40px;
+      display: block;
+    }
+    .btn {
+      border: 1px solid #333;
+      border-radius: 3px;
+      background-color: #EFEFEF;
+      padding: 8px 16px;
+    }
+  </style>
 </html>
