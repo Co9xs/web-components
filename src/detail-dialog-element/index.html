@@ -3,8 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>Ditail Dialog Element</title>
+    <link href="./index.css" rel="stylesheet"/>
   </head>
   <body>
-    <h1>Detail Dialog Element</h1>
+    <details>
+      <summary>Open dialog</summary>
+      <details-dialog>
+        Modal content
+        <button type="button" data-close-dialog>Close</button>
+      </details-dialog>
+    </details>
+    <details>
+      <summary>Robots</summary>
+      <details-dialog src="/robots" preload>
+        <include-fragment>Loading…</include-fragment>
+      </details-dialog>
+    </details>
   </body>
 </html>
