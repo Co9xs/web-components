@@ -24,9 +24,8 @@ module.exports = {
       chunks:['detailDialogElement'],
       template: './src/detail-dialog-element/index.html',
       filename: 'dialog/index.html'
-    }),
-    new webpack.HotModuleReplacementPlugin()
-  ],
+    })
+ ],
   module: {
     rules: [
       {
