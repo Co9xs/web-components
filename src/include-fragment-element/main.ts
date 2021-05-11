@@ -101,12 +101,10 @@ export default class IncludeFragmentElement extends HTMLElement {
 
   attributeChangedCallback(attribute: string, oldVal:string|null): void {
     if (attribute === 'src') {
-      // Source changed after attached so replace element.
       if (this.isConnected && this.loading === 'eager') {
         handleData(this)
       }
     } else if (attribute === 'loading') {
-      // Loading mode changed to Eager after attached so replace element.
       if (this.isConnected && oldVal !== 'eager' && this.loading === 'eager') {
         handleData(this)
       }
