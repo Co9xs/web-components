@@ -11,6 +11,8 @@ const loaded: Promise<unknown> = (function () {
 class TypingEffectElement extends HTMLElement {
   async connectedCallback(): Promise<void> {
     await loaded
+    console.log(this.content)
+    console.log(this.lines)
     if (this.content) await typeLines(this.lines, this.content, this.characterDelay, this.lineDelay)
     if (this.cursor) this.cursor.hidden = true
     this.dispatchEvent(
@@ -31,10 +33,11 @@ class TypingEffectElement extends HTMLElement {
 
   get lines(): string[] {
     const linesAttr = this.getAttribute('data-lines')
+    console.log(linesAttr)
     try {
       return linesAttr ? (JSON.parse(linesAttr) as string[]) : []
-    } catch {
-      return []
+    } catch(e) {
+      console.error(e)
     }
   }
 

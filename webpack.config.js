@@ -6,7 +6,8 @@ module.exports = {
   entry: {
     // add path to file you want bandle
     clipboardCopyElement: './src/clipboard-copy-element/main.ts',
-    detailDialogElement: './src/detail-dialog-element/main.ts'
+    detailDialogElement: './src/detail-dialog-element/main.ts',
+    typingEffectElement: './src/typing-effect-element/main.ts',
   },
   output: {
     filename: '[name].js',
@@ -24,7 +25,12 @@ module.exports = {
       chunks:['detailDialogElement'],
       template: './src/detail-dialog-element/index.html',
       filename: 'dialog/index.html'
-    })
+    }),
+    new HtmlWebpackPlugin({
+      chunks:['typingEffectElement'],
+      template: './src/typing-effect-element/index.html',
+      filename: 'typing/index.html'
+    }),
  ],
   module: {
     rules: [
