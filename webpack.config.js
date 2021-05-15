@@ -8,6 +8,7 @@ module.exports = {
     clipboardCopyElement: './src/clipboard-copy-element/main.ts',
     detailDialogElement: './src/detail-dialog-element/main.ts',
     typingEffectElement: './src/typing-effect-element/main.ts',
+    filterInputElement: './src/filter-input-element/main.ts',
   },
   output: {
     filename: '[name].js',
@@ -30,6 +31,11 @@ module.exports = {
       chunks:['typingEffectElement'],
       template: './src/typing-effect-element/index.html',
       filename: 'typing/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      chunks:['filterInputElement'],
+      template: './src/filter-input-element/index.html',
+      filename: 'filter-input/index.html'
     }),
  ],
   module: {

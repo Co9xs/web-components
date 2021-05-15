@@ -113,7 +113,7 @@ async function filterResults(filterInput: FilterInputElement, checkCurrentQuery:
     if (showCreateOption) updateNewItem(newItem, query)
   }
 
-  toggleBlankslate(contaienr, count > 0 || showCreateOption)
+  toggleBlankslate(container, count > 0 || showCreateOption)
 
   filterInput.dispatchEvent(
     new CustomEvent('filter-input-updated', {

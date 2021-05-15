@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Filter Input Element</title>
+  </head>
+  <body>
+    <h1>Filter Input Element</h1>
+    <filter-input aria-owns="robots">
+      <label>
+        Filter robots
+        <input type="text" autofocus autocomplete="off">
+      </label>
+    </filter-input>
+    <div id="robots">
+      <ul data-filter-list>
+        <li>Bender</li>
+        <li>Hubot</li>
+        <li>Wall-E</li>
+        <li>BB-8</li>
+        <li>R2-D2</li>
+      </ul>
+      <form action="/new" data-filter-new-item hidden>
+        <button name="robot" data-filter-new-item-value>
+          Create robot "<span data-filter-new-item-text></span>"
+        </button>
+      </form>
+      <p data-filter-empty-state hidden>0 robots found.</p>
+    </div>
+  </body>
+</html>
