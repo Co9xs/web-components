@@ -154,10 +154,10 @@ function toggleBlankslate(container: HTMLElement, force: boolean) {
 }
 
 function debounce(callback: () => void) {
-  let timeout: NodeJS.Timeout
+  let timeout: number
   return function() {
     clearTimeout(timeout)
-    timeout = setTimeout(() => {
+    timeout = window.setTimeout(() => {
       clearTimeout(timeout)
       callback()
     }, 300)
